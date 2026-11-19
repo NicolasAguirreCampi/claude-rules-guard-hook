@@ -1,4 +1,4 @@
-# claude-rules-guard
+# claude-rules-guard-hook
 
 A Claude Code `PreToolUse` hook. Before every `Write` or `Edit`, it adds the coding rules that apply to that file to Claude's context:
 
@@ -13,12 +13,12 @@ Requires Python 3.13+.
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/NicolasAguirreCampi/claude-rules-guard.git
+   git clone https://github.com/NicolasAguirreCampi/claude-rules-guard-hook.git
    ```
 2. Copy the hook into your Claude folder:
    ```bash
    mkdir -p ~/.claude/hooks
-   cp claude-rules-guard/rules_guard.py ~/.claude/hooks/
+   cp claude-rules-guard-hook/rules_guard.py ~/.claude/hooks/
    ```
 3. Add it to `~/.claude/settings.json`:
    ```json
