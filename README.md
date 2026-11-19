@@ -7,6 +7,12 @@ A Claude Code `PreToolUse` hook. Before every `Write` or `Edit`, it adds the cod
 
 When a project rule and a global rule disagree, the project rule wins.
 
+## Why
+
+Claude loads `CLAUDE.md` once, at the start of the session. By the time it writes a file, those rules may be thousands of lines back, and a convention gets missed: a controller spec that skips a permission level, a comment the rules forbid. This hook puts the rules for that kind of file right next to the write, every time.
+
+It also makes precedence explicit. With no rule about precedence, Claude has to guess which of two contradicting rules to follow. Here the project's rule always wins.
+
 ## Install
 
 Requires Python 3.13+.
